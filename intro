@@ -1,0 +1,2 @@
+s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
+src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2]).out()
