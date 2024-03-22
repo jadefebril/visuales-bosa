@@ -4,8 +4,12 @@ src(s0).modulate(noise(0.33,0.000009))
 .diff(osc(65, 0.3, 100))
   .out(o0)
 
-osc().kaleid().mult(osc(20, 0.001, 0).rotate(1.58)).blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time))).out(o0)
 
+osc().kaleid().mult(osc(20, 0.001, 0).rotate(1.58))
+  .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))
+  .color().out(o0)
+  
+  
 osc(13,0,1)
   .modulate(osc(21,0.25,0))
   .modulateScale(osc(34))
