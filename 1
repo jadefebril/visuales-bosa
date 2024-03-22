@@ -1,0 +1,7 @@
+
+s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHhldzlsdWtmdGpqcHZibDF0ejJmOGttZjl0dG0yNm0yNXU2cWs5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fr8dFiO69eioSjZbFD/giphy-downsized-large.mp4")
+src(s0).modulate(noise(0.33,0.000009))
+.diff(osc(65, 0.3, 100))
+  .out(o0)
+
+osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2).out()
