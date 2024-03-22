@@ -5,9 +5,9 @@ src(s0).modulate(noise(0.33,0.000009))
   .out(o0)
 
 
-osc().kaleid().mult(osc(20, 0.001, 0).rotate(1.58))
-  .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))
-  .color().out(o0)
+s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21kYmZnOHlmYW54aWU1aTd2OHoxaml4eDlpdnBtNTJkemJreXUyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S8CZRdTUppPd6/giphy.mp4")
+src(o0).diff(osc().kaleid().mult(osc(13,0,14).rotate(1.58))
+  .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))).out(o0)
   
   
 osc(13,0,1)
