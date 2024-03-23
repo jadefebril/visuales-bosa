@@ -30,9 +30,12 @@ src(s0).modulate(noise(0.33,0.0009))
 .blend(osc(34,0.4,0)).invert().color(9,1,5,4) //ROSAA
   .out(o0)
 -
-   s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
+ s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
 src(s0).out(o1)
 
+src(s0).blend(o1).blend(osc(34,0.7,0)).invert().color(9,1,5,4) 
+.out(o0) //star
+-
 s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 
