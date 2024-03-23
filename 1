@@ -1,41 +1,25 @@
-
-s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNjbXZ6aHFzYWQ2Mml0eW01djJndDY1NmR5ZGNwaTUwanh3YzMxdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xmdm88JhZa3AhXhJMO/giphy-downsized-large.mp4")
+-BREATH IN BREATH OUT Y SLAPPING
+s0.initScreen()
 src(s0).modulate(noise(0.33,0.000009))
-.diff(osc(65, 0.3, 100))
+.diff(osc(13,3,217))
   .out(o0)
-  
-s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21kYmZnOHlmYW54aWU1aTd2OHoxaml4eDlpdnBtNTJkemJreXUyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/S8CZRdTUppPd6/giphy.mp4")
-src(o0).diff(osc().kaleid().mult(osc(13,0,14).rotate(1.58))
-  .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))).out(o0)
-  
-  
-osc(13,0,1)
-  .modulate(osc(21,0.25,0))
-  .modulateScale(osc(34))
-  .modulateKaleid(osc(55),0.1,1)
-
-
-osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2).out()
--
-s0.initCam
-src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
-
+  -
 osc(60,-0.015,0.3).diff(osc(60,0.08).rotate(Math.PI/2))
 	.modulateScale(noise(3.5,0.25).modulateScale(osc(15).rotate(()=>Math.sin(time/2))),0.6)
 	.color(1,0.5,0.4).contrast(1.4)
 
-
+PERFO-
+ s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
+src(s0).out(o1)
+-
+src(s0).blend(o1).blend(osc(34,0.7,0)).invert().color(9,1,5,4) 
+.out(o0) //star
+-primer momento
  s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 .blend(osc(34,0.4,0)).invert().color(9,1,5,4) //ROSAA
   .out(o0)
--
- s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
-src(s0).out(o1)
-
-src(s0).blend(o1).blend(osc(34,0.7,0)).invert().color(9,1,5,4) 
-.out(o0) //star
--
+-vogue
 s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 
@@ -52,3 +36,12 @@ src(o0).out(o0)
 	.invert().brightness(0.1).contrast(1.2)
 	.modulateScale(osc(2),-0.2)
   .out()
+-acaba el perfo
+
+s0.initCam()
+src(o0).diff(osc().kaleid().mult(osc(13,0,14).rotate(1.58))
+  .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))).out(o0)
+
+-spiritual g
+s0.initCam
+src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
