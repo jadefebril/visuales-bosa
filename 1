@@ -11,39 +11,40 @@ s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyO
 src(s0).out(o1)
 src(s0).blend(o1).blend(osc(34,0.7,0)).invert().color(9,1,6,4) 
 .out(o0) //star
--
+
+---//Modulate to blend -primer momento
+
 s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 .modulate(osc(4,0.4,0)).invert().color(9,1,5,4) //rosita fresita
   .out(o0)
-  
--primer momento
-
- s0.initCam()
+  ----
+s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
-.blend(osc(34,0.4,0)).invert().color(9,1,5,4) //rosita fresita
+.blend(osc(60,-0.015,0.3).modulateScale(noise(3.5,0.25).modulateScale(osc(15).rotate(()=>Math.sin(time/2))),0.6))
+  .modulateScale(osc(2),-0.2)
+  .invert().color(9,1,5,2)
+//rosita fresita
   .out(o0)
-  
--vogue
-s0.initCam()
-src(s0).modulate(noise(0.33,0.0009))
+  -----
 
-src(s0).blend(o1).blend(osc(34,0.4,0)).invert().color(9,1,5,4) 
-.out(o0)
--
+-vogue
+
 s0.initCam()
-src(s0).invert().saturate(25,1,3).out(o0)
- 
- .add(src(o0).modulate(o0,.04),.6)
+src(s0).invert().saturate(25,1,3)
+   .add(src(o0).modulate(o0,.04),.6)
 	.invert().brightness(0.1).contrast(1.2)
 	.modulateScale(osc(2),-0.2)
-  .out()
+  .out(o0)
+  
 -acaba el perfo
+
+//spiritual g
+s0.initCam
+src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
+
+-para acabar
 
 s0.initCam()
 src(o0).diff(osc().kaleid().mult(osc(13,0,14).rotate(1.58))
   .blend(o0, 0.94).modulateScale(osc(10, 0),-0.03).scale(0.8, () => (1.05 + 0.1 * Math.sin(0.05*time)))).out(o0)
-
--spiritual g
-s0.initCam
-src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
