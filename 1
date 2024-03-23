@@ -1,10 +1,12 @@
 -BREATH IN BREATH OUT Y SLAPPING
-s0.initScreen()
-src(s0).modulate(noise(0.33,0.000009))
-.diff(osc(13,3,217))
-  .out(o0)
-  
-  -
+
+s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTh4NTNsZzRzdTFkNzJsODdxMDE4cnhnaTVvMm80YWpsODQyYnZwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xmdm88JhZa3AhXhJMO/giphy.mp4")
+src(s0).modulate(noise(0.03,0.9))
+.diff(osc(4,0.3,0)).out(o0)
+
+  s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXU4YTB5bHJ5YjdycG1lbTg0emZlY2xsb3N6OXo4YzhubmdrZjdmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zpnnmxRWMYacOKI8wG/giphy.mp4")
+src(s0).out(o0)
+
 PERFO-
  
 s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
@@ -18,7 +20,8 @@ s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 .modulate(osc(4,0.4,0)).invert().color(9,1,5,4) //rosita fresita
   .out(o0)
-  ----
+  
+  ---- hands performance
 s0.initCam()
 src(s0).modulate(noise(0.33,0.0009))
 .blend(osc(60,-0.015,0.3).modulateScale(noise(3.5,0.25).modulateScale(osc(15).rotate(()=>Math.sin(time/2))),0.6))
@@ -43,7 +46,7 @@ src(s0).invert().saturate(25,1,3)
 s0.initCam
 src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
 
--para acabar
+-cerrar
 
 s0.initCam()
 src(o0).diff(osc().kaleid().mult(osc(13,0,14).rotate(1.58))
