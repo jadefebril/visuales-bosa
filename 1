@@ -46,6 +46,8 @@ src(s0).invert().saturate(25,1,3)
 s0.initCam
 src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
 
+noise(0.00009,0.9).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
+
 -cerrar
 
 s0.initCam()
