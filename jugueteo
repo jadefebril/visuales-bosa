@@ -6,3 +6,5 @@ solid(1,.2)
 	.layer(text(str))
 	.diff(strokeText(str).modulateScale(noise(1,1), .4))
 	.out()
+
+.rotate(() => time%360 
