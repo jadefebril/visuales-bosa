@@ -1,28 +1,28 @@
 
-//jade
+// jade
 //ig:@febril___
 s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
 src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2]).out()
 
 //lapielcondensa
 
-osc(60,-0.015,0.3).diff(osc(60,0.08).rotate(Math.PI/2))
-	.modulateScale(noise(3.5,0.25).modulateScale(osc(15).rotate(()=>Math.sin(time/2))),0.6)
-	.color(1,0.5,4).contrast(1.4).out(o1)
-s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
-src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2])
-  .diff(o1).out()
+//osc(60,-0.015,0.3).diff(osc(60,0.08).rotate(Math.PI/2))
+//	.modulateScale(noise(3.5,0.25).modulateScale(osc(15).rotate(()=>Math.sin(time/2))),0.6)
+//	.color(1,0.5,4).contrast(1.4).out(o1)
+//s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
+//src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2])
+ // .diff(o1).out()
 
 //ballroom
 
 //s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
-src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
+//src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
 // .out()
 //t
 
 //osc(33).rotate(2, 0.8).modulateRotate(o0, () => (a.fft[0]*3)).out(o1)
-s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
-src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
+//s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
+//src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
 //.modulateRotate(o1, 0.4).out(o0)
 
 //https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4
@@ -81,7 +81,7 @@ src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).inv
   //colorama varies
 //bpm= 120
 //osc(4, 0.1,).color(3,0.5,10,0.006).contrast(0.2).rotate(0.30, 0.1).pixelate(2, 20).modulate(noise(2.5,1),
-() => 1.5 * Math.sin(0.8 * bpm)).saturate(5)
+//() => 1.5 * Math.sin(0.8 * bpm)).saturate(5)
 //.colorama(1,4).mirrorX()
 //.modulateKaleid(o1).rotate().out(o0)
 
