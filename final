@@ -25,12 +25,12 @@ s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
 src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
 //.modulateRotate(o1, 0.4).out(o0)
 
-https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4
-https://media.giphy.com/media/XtmBzkK8t31llxtHtZ/giphy.mp4
-https://media.giphy.com/media/z2c5ZpnHKhKo0NaYkQ/giphy.mp4
-https://media.giphy.com/media/1BhohcGtlU54cEb0JL/giphy.mp4
-https://media.giphy.com/media/N7q268RfHrriIqo3Ry/giphy.mp4
-https://media.giphy.com/media/TUPFoJw9GGgbjW956A/giphy.mp4
+//https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4
+//https://media.giphy.com/media/XtmBzkK8t31llxtHtZ/giphy.mp4
+//https://media.giphy.com/media/z2c5ZpnHKhKo0NaYkQ/giphy.mp4
+//https://media.giphy.com/media/1BhohcGtlU54cEb0JL/giphy.mp4
+//https://media.giphy.com/media/N7q268RfHrriIqo3Ry/giphy.mp4
+//https://media.giphy.com/media/TUPFoJw9GGgbjW956A/giphy.mp4
 
 //mdulate to blend
 
