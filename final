@@ -13,19 +13,15 @@ s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
 src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2])
   .diff(o1).out()
 
-//balllroom
- 
-//s0.initVideo("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzZnb2FxbjB4NTQyOHdqeW5tenplNG40Mjl3Z2h0Mmh3cm41NGcycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/wVRqJVzBeaHtu/giphy.mp4")
-//src(s0).out(o1)
-//src(s0).blend(o1).blend(osc(34,0.7,0)).invert().color(9,1,6,4) .out(o0) //star
+//ballroom
 
+s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
+src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
+ .out()
 //mdulate to blend
 
-//s0.initCam()
-//src(s0).modulate(noise(0.33,0.0009)).modulate(osc(4,0.4,0)).invert().color(9,1,5,4) //rosita fresita
-     //.out(o0) 
+//perfo
 
-//transition
 // hydraText.font = "serif"
 //hydraText.lineWidth = "5%"
 //str = " El oficio de vestirse_De repente,cuando despierto en la mañana, me acuerdo de mí,con sigilo abro los ojos y procedo a vestirme"
