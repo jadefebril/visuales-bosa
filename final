@@ -1,4 +1,8 @@
 
+
+await loadScript("https://hyper-hydra.glitch.me/hydra-fractals.js")
+
+await loadScript("https://hyper-hydra.glitch.me/hydra-text.js")
 // jade
 //ig:@febril___
 s0.initImage("https://archive.org/download/la-piel/la%20piel.jpg")
@@ -89,10 +93,10 @@ src(s0).invert().saturate(25,1,3)
 
 //noise(0.00009,0.9).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
 
-//s0.initCam()
-//src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)) 
-	//.scale(.75).invert().mirrorX2()
-//.out()
+s0.initCam()
+src(o0).diff(osc(6,0.1,() => (a.fft[0]*4)).modulate(noise(3)).kaleid(4).saturate(2)) 
+	.scale(.75).invert().mirrorX2()
+.out()
 
 //s0.initCam()
 //src(o0).diff(osc(6,0.1,1.5).modulate(noise(3,[3,2,5])).kaleid(4).invert().luma()) 
