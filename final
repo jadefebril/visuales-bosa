@@ -74,16 +74,16 @@ src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).inv
 
 //spiritual g
 
-bpm= 120
-osc(4, 0.1,).color(1,0.5,4).contrast(1.4).rotate(0.30, 0.1).pixelate(2, 20).modulate(noise(2.5,1),
- () => 1.5 * Math.sin(0.8 * bpm)) .saturate(3).mirrorX()
- .modulateKaleid(o1).rotate ().out(o0)
+//bpm= 120
+//osc(4, 0.1,).color(1,0.5,4).contrast(1.4).rotate(0.30, 0.1).pixelate(2, 20).modulate(noise(2.5,1),
+ //() => 1.5 * Math.sin(0.8 * bpm)) .saturate(3).mirrorX()
+ //.modulateKaleid(o1).rotate ().out(o0)
   //colorama varies
-bpm= 120
-osc(4, 0.1,).color(3,0.5,10,0.006).contrast(0.2).rotate(0.30, 0.1).pixelate(2, 20).modulate(noise(2.5,1),
+//bpm= 120
+//osc(4, 0.1,).color(3,0.5,10,0.006).contrast(0.2).rotate(0.30, 0.1).pixelate(2, 20).modulate(noise(2.5,1),
 () => 1.5 * Math.sin(0.8 * bpm)).saturate(5)
-.colorama(1,4).mirrorX()
-.modulateKaleid(o1).rotate().out(o0)
+//.colorama(1,4).mirrorX()
+//.modulateKaleid(o1).rotate().out(o0)
 
 //s0.initCam()
 //src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)).out()
