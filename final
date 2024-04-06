@@ -36,9 +36,74 @@ src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2]).out()
 //https://media.giphy.com/media/N7q268RfHrriIqo3Ry/giphy.mp4
 //https://media.giphy.com/media/TUPFoJw9GGgbjW956A/giphy.mp4
 
-//mdulate to blend
+//el oficio de vestirse
+p0 = new P5({mode: 'WEBGL'})
+p0.cam = p0.createCapture(p0.VIDEO);
+p0.cam.hide();
+p0.hide()
+p1 = new P5 ()
+p1.frameRate(5);
+textArray = ["Cuando despierto en la mañana",
+"me acuerdo de mí",
+"con sigilo abro los ojos",
+"y procedo a vestirme.",
+"Lo primero es colocarme mi gesto",
+"de persona decente.",
+"En seguida me pongo las buenas",
+"costumbres, el amor",
+"filial, el decoro, la moral,",
+"la fidelidad conyugal:",
+"para el final dejo los recuerdos.",
+"Lavo con primor",
+"mi cara de buena ciudadana",
+"visto mi tan deteriorada esperanza",
+"me meto entre la boca las palabras",
+"cepillo la bondad",
+"y me la pongo de sombrero",
+"y en los ojos",
+"esa mirada tan amable",
+             "Entre el armario selecciono las ideas",
+"que hoy me apetece lucir",
+"y sin perder más tiempo",
+"me las meto en la cabeza"] 
 
-//perfo
+p1.draw = () =>{
+p1.fill("black");
+p1.textSize(60);
+p1.textFont("Georgia");
+p1.textStyle(p1.BOLD);
+p1.textAlign(p1.CENTER);
+index = Math.floor((p1.random*0,1.15)*time%textArray.length)
+p1.clear()
+p1.text(textArray[index], (p1.width/2), (p1.height/1.15));
+p1.hide()
+}
+
+s1.init({src:p1.canvas})
+s0.initScreen()
+src(s0).blend(o1).saturate(2).contrast(1.3)
+.layer(src(o0).mask(shape(4,2).scale(0.5,0.7)
+.scrollX(0.25)).scrollX(0.001)).modulate(o0,0.001)
+.color(9,1,5,1)
+.blend(o0,.95)
+.modulate (o0,.01)
+.layer(src(o1))
+.out()
+
+src(s0).modulateScale(o1,({time}) => Math.sin(time)*5)
+.out(o1)
+
+src(s1)
+.modulate(s1,10)
+.blend(src(s1))
+.out(o2)
+
+src(o0).layer(src(o2)).out(o3)
+
+render(o3)
+speed=0.45
+//intervención poema, maria mercedes carranza
+
 
 //s0.initScreen() //desvestirs
 //src(s0).modulate(noise(0.33,0.0009))
