@@ -15,9 +15,23 @@ src(s0).saturate(2).contrast(2).modulate(noise(10),[0.009,0.03,0.2])
 
 //ballroom
 
+//s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
+src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
+// .out()
+//t
+
+//osc(33).rotate(2, 0.8).modulateRotate(o0, () => (a.fft[0]*3)).out(o1)
 s0.initVideo("https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4")
 src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).invert().color(9,1,5,4).scale(1.2)
- .out()
+//.modulateRotate(o1, 0.4).out(o0)
+
+https://media.giphy.com/media/1fKOzSbNapEyi0juUn/giphy.mp4
+https://media.giphy.com/media/XtmBzkK8t31llxtHtZ/giphy.mp4
+https://media.giphy.com/media/z2c5ZpnHKhKo0NaYkQ/giphy.mp4
+https://media.giphy.com/media/1BhohcGtlU54cEb0JL/giphy.mp4
+https://media.giphy.com/media/N7q268RfHrriIqo3Ry/giphy.mp4
+https://media.giphy.com/media/TUPFoJw9GGgbjW956A/giphy.mp4
+
 //mdulate to blend
 
 //perfo
@@ -49,6 +63,7 @@ src(s0).invert().color().modulate(noise(0.33,0.0009)).modulate(solid(4,0,1)).inv
  // .modulateScale(osc(2),-0.2) .invert().color(9,0.4,5,2).saturate(0.7)
 //rosita fresita
  // .out(o0)
+
 //ballrooom
 
 //s0.initCam()
@@ -78,17 +93,17 @@ osc(4, 0.1,).color(3,0.5,10,0.006).contrast(0.2).rotate(0.30, 0.1).pixelate(2, 2
 //s0.initCam()
 //src(o0).diff(osc(6,0.1,1.5).modulate(noise(3)).kaleid(4).saturate(2)) 
 	//.scale(.75).invert().mirrorX2()
-//out()
+//.out()
 
 //s0.initCam()
 //src(o0).diff(osc(6,0.1,1.5).modulate(noise(3,[3,2,5])).kaleid(4).invert().luma()) 
 	//.scale(.75).invert().mirrorX2()
-//out()
+//.out()
 
 //s0.initCam()
 //src(o0).diff(osc(6,0.1,1.5).modulate(noise(3,[3,1,4])).kaleid(4).invert().luma()) 
 //	.scale(0.75).invert().mirrorX2()
-//out()
+//.out()
 //close
 
 //s0.initCam()
